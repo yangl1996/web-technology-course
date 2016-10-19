@@ -2,10 +2,6 @@
 <html lang="en">
     <head>
 <style>
-form {
-    display: inline;
-}
-
 body {
     margin:0;
     padding:0;
@@ -55,7 +51,12 @@ div.right-bar {
 </style>
         <meta charset="UTF-8">
         <title>Homework 3</title>
+        <script type="text/javascript" src="./static/display.js"></script>
+        <script type="text/javascript">
+window.onload = populate;
+        </script>
         <link rel="stylesheet" href="./static/homework3.css">
+        <link rel="stylesheet" href="./static/table.css">
     </head>
 
     <body>
@@ -69,22 +70,18 @@ div.right-bar {
             <p><a href="./homework3-2.html">Online Questionare</a></p>
         </div>
         <div class="main">
-            <form action="/cgi-bin/collect.pl" method="post">
-                <label class="form-label" for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label class="form-label" for="age">Age</label>
-                <input type="text" id="age" name="age">
-                <label class="form-label">Gender</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label class="radio-label" for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label class="radio-label" for="female">Female</label>
-                <label class="form-label" for="email">Email</label>
-                <input type="text" id="email" name="email">
+            <p>Page rendered with AJAX and form processed with Javascript. Enjoy ;)</p>
+            <form action="/cgi-bin/delete.pl" method="post">
+                <table id="mytable">
+                    <tr>
+                        <th>Select</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                    </tr>
+                </table>
                 <input type="submit" value="Submit">
-            </form>
-            <form action="./homework3-2-results.html">
-                <input type="submit" value="Results">
             </form>
         </div>
         <div class="footer">
