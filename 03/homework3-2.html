@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<style>
+body {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+}
+
+div.header {
+    background-color: #262626;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+div.main {
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+div.footer {
+    clear: both;
+    text-align: center;
+    background-color: #e6e6e6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.left-bar {
+    float: left;
+    width: 230px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+div.right-bar {
+    float: right;
+    width: 230px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+</style>
+        <meta charset="UTF-8">
+        <title>Homework 3</title>
+        <link rel="stylesheet" href="./static/homework3.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 3: Basic Web Protocols II</h1>
+            <h2 class="title">Online Questionare</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework3-1.html">CSS Showcase</a></p>
+            <p><a href="./homework3-2.html">Online Questionare</a></p>
+        </div>
+        <div class="main">
+            <form>
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label class="form-label" for="age">Age</label>
+                <input type="text" id="age" name="age">
+                <label class="form-label">Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="radio-label" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label class="radio-label" for="female">Female</label>
+                <label class="form-label" for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <input type="submit" value="Submit">
+                <input type="button" value="Results">
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+            <img src="./static/html.png" alt="HTML Validation" style="">
+            <img src="./static/css2.png" alt="CSS Validation" style="">
+        </div>
+    </body>
+</html>
+        
