@@ -70,8 +70,7 @@ window.onload = populate;
             <p><a href="./homework3-2.html">Online Questionare</a></p>
         </div>
         <div class="main">
-            <p>Page rendered with AJAX and form processed with Javascript. Enjoy ;)</p>
-            <form action="/cgi-bin/delete.pl" method="post">
+            <form action="/cgi-bin/delete.pl" method="post" id="dispform">
                 <table id="mytable">
                     <tr>
                         <th>Select</th>
@@ -81,7 +80,7 @@ window.onload = populate;
                         <th>Email</th>
                     </tr>
                 </table>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Delete Selected">
             </form>
         </div>
         <div class="footer">

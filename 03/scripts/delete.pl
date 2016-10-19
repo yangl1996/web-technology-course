@@ -6,6 +6,10 @@ use CGI ":standard";
 $LOCK = 2;
 $UNLOCK = 8;
 
+sub success {
+    print "<script type=\"text/javascript\">window.location=\"http://162.105.146.180:8096/03/homework3-2-results.html\"</script>";
+}
+
 my(@name, @age, @gender, @email);
 my @selected_list = param("select");
 my %selected = map {$_ => 1} @selected_list;
@@ -57,3 +61,5 @@ while (my $output = shift(@name)) {
 
 flock(DB, $UNLOCK);
 close(DB);
+print header();
+success();

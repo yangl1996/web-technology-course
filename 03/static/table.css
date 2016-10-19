@@ -1,5 +1,6 @@
 table, th, td
 {
+    color: #666666;
     border: 1px solid black;
     border-collapse: collapse;
     font-family: helvetica;

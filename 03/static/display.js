@@ -22,3 +22,4 @@ function HTTPGet(url) {
     HTTPReq.send(null);
     return HTTPReq.responseText;
 }
+
