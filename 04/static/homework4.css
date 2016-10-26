@@ -1,0 +1,199 @@
+code {
+    font-family: "Courier New", Courier, monospace;
+    color: #666666;
+    font-weight: lighter;
+    font-size: 100%;
+}
+
+body {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+}
+
+div.header {
+    background-color: #262626;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+div.main {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+div.footer {
+    clear: both;
+    text-align: center;
+    background-color: #e6e6e6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div.left-bar {
+    float: left;
+    width: 230px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+div.right-bar {
+    float: right;
+    width: 230px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+label.form-label
+{    
+    color: #4d4d4d;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 110%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    display: block
+}
+
+label.radio-label
+{
+    color: #666666;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 100%;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+input[type="radio"]
+{
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"], input[type="button"]
+{
+    background-color: #737373;
+    border: none;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 105%;
+    color: white;
+    padding: 12px 28px;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover
+{
+    background-color: #595959;
+}
+
+input[type="text"] 
+{
+    width: 60%;
+    min-width: 300px;
+    margin: 0 4px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 105%;
+    font-family: helvetica;
+    font-weight: lighter;
+    border-bottom: 1px solid #0099ff;
+    display: block
+}
+
+h1 
+{
+    margin-top: 40px;
+    color: #4d4d4d;
+    font-family: helvetica;
+    font-size: 150%;
+}
+
+h1.title
+{
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    font-size: 200%;
+}
+
+h2
+{
+    margin-top: 40px;
+    color: #4d4d4d;
+    font-family: helvetica;
+    font-size: 130%;
+}
+
+h2.title
+{
+    color: #f2f2f2;
+    padding: 0px;
+    font-weight: lighter;
+    padding-top: 15px;
+    margin: 0px;
+}
+
+p
+{
+    color: #666666;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 100%;
+}
+
+p.footer
+{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+li
+{
+    color: #666666;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 100%;
+}
+
+a
+{
+    text-decoration: none;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 100%;
+}
+
+a:link
+{
+    color: #0099ff;
+}
+
+a:visited
+{
+    color: #0099ff;
+}
+
+a:hover
+{
+    color: #3366cc;
+}
+
+a:active
+{
+    color: #3366cc;
+}
+

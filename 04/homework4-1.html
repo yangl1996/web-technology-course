@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 4</title>
+        <link rel="stylesheet" href="./static/homework4.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 4: Access Database through Web</h1>
+            <h2 class="title">Questions</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework4-1.html">Questions</a></p>
+        </div>
+        <div class="right-bar"><br></div>
+        <div class="main">
+            <p><b>Question 1.</b> Give the SELECT command to answer the question Who will go to the party held in Peking University?</p>
+            <code>
+                SELECT guest.Guest_Name<br>
+                FROM guest, party, guest_party<br>
+                WHERE party.Party_Num=guest_party.Party_Num<br>
+                AND guest_party.Guest_Num=guest.Guest_Num<br>
+                AND party.Place='Peking University';
+            </code>
+            <p><b>Question 2.</b> Figure out a way to obtain the column labels returned by mysql_fetch_array.</p>
+            <code>
+                $result = mysql_query($your_query);<br>
+                $row = mysql_fetch_array($result);<br>
+                while($pair = each($row)) {<br>
+                &nbsp;$key = $pair["key"];<br>
+                &nbsp;if (is_string($key)) print("$key");<br>
+                }
+            </code>
+
+            <p><b>Question 3.</b> Tell the difference between a CGI program and a PHP program executed by a Web Server.</p>
+            <p>
+                PHP script is embedded in HTML documents, and is processed by an Apache module upon requested, of which the result replaces the script and forms a complete HTML document.
+            </p>
+            <p>
+                CGI program is invoked by Apache upon requested, and they use a predefined method to communicate. Apache reads output from the CGI program and regards it as a complete document. CGI program can be written in any language and executed in any method.
+            </p>
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        
