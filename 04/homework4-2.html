@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 4</title>
+        <link rel="stylesheet" href="./static/homework4.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 4: Access Database through Web</h1>
+            <h2 class="title">Online Questionare Remastered</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework4-1.html">Questions</a></p>
+            <p><a href="./homework4-2.html">Online Questionare Remastered</a></p>
+        </div>
+        <div class="main">
+            <form action="./collect.php" method="post">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label class="form-label" for="age">Age</label>
+                <input type="text" id="age" name="age">
+                <label class="form-label">Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="radio-label" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label class="radio-label" for="female">Female</label>
+                <label class="form-label" for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <input type="submit" value="Submit">
+            </form>
+            <form action="./results.php">
+                <input type="submit" value="Results">
+            </form>
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        

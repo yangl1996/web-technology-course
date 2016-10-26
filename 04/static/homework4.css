@@ -1,3 +1,7 @@
+form {
+    display: inline;
+}
+
 code {
     font-family: "Courier New", Courier, monospace;
     color: #666666;
