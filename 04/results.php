@@ -52,7 +52,7 @@ $num_rows = mysqli_num_rows($result);
 
 for ($row_num=0; $row_num < $num_rows; $row_num++) {
     $row = mysqli_fetch_array($result);
-    print "<tr><td><input type=\"checkbox\" name=\"select\" value=\"".($row["Guest_ID"])."\"></td><td>";
+    print "<tr><td><input type=\"checkbox\" name=\"select[]\" value=\"".($row["Guest_ID"])."\"></td><td>";
     print htmlspecialchars($row["Guest_Name"]);
     print "</td><td>".($row["Age"])."</td><td>".($row["Gender"])."</td><td>";
     print htmlspecialchars($row["E_mail"]);
