@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="./cook.xsl"?>
+<cookbook>
+    <recipe>
+        <name>Rhubarb and Custard</name>
+        <ingredient>
+            <item>
+                <name>Milk</name>
+                <amount unit="ml">15</amount>
+            </item>
+            <item>
+                <name>Rhubarb</name>
+                <amount unit="g">700</amount>
+            </item>
+            <item>
+                <name>Custard Powder</name>
+                <amount unit="g">8</amount>
+            </item>
+        </ingredient>
+        <preparation>
+            <step>Mix together and put in oven proof dish</step>
+        </preparation>
+        <cooking>
+            <step>Heat in a moderate oven for 40 mins</step>
+        </cooking>
+    </recipe>
+    <recipe>
+        <name>Teriyaki Chicken</name>
+        <ingredient>
+            <item>
+                <name>Chicken</name>
+                <amount unit="g">150</amount>
+            </item>
+            <item>
+                <name>Rice</name>
+                <amount unit="g">200</amount>
+            </item>
+            <item>
+                <name>Sauce</name>
+                <amount unit="tablespoon">1</amount>
+            </item>
+        </ingredient>
+        <preparation>
+            <step>Chop the chicken into slices</step>
+            <step>Rinse the rice in flowing water</step>
+            <step>Brush chicken with the sauce</step>
+        </preparation>
+        <cooking>
+            <step>Bake the chicken in the preheated oven for 30 minutes</step>
+        </cooking>
+    </recipe>
+</cookbook>
+
