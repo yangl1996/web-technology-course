@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 6</title>
+        <link rel="stylesheet" href="./static/homework6.css">
+        <script language="javascript">
+var holidays = [];
+
+function Holiday(destination, duration, cost, operator) {
+    this.destination = destination;
+    this.duration = duration;
+    this.cost = cost;
+    this.agent = operator;
+    this.toStr = function () {
+        return "Destination: " + this.destination + ", Duration: " + this.duration + ", Cost: " + this.cost + ", Agent: " + this.agent;
+    }
+}
+        
+function makeHoliday(dest, dur, cost, operator) {
+    hol = new Holiday(dest, dur, cost, operator);
+    holidays.push(hol);
+}
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 6: JavaScript is not Java</h1>
+            <h2 class="title">Homework 4</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework6.html">Homework 0</a></p>
+            <p><a href="./hiThere.html">Homework 1</a></p>
+            <p><a href="./function.html">Homework 2</a></p>
+            <p><a href="./popups.html">Homework 3</a></p>
+            <p><a href="./objects.html">Homework 4</a></p>
+            <p><a href="./wizardForm.html">Homework 5</a></p>
+        </div>
+        <div class="right-bar"><br></div>
+        <div class="main">
+        <script language="javascript">
+makeHoliday("Kyoto", "12 days", "$8000", "OneWorld");
+makeHoliday("Sydney", "18 days", "$16000", "Star Alliance");
+makeHoliday("London", "14 days", "$14000", "Star Team Alliance");
+document.write("<p>We offer these packages: </p><ul>")
+for (i in holidays) {
+    document.write("<li>" + holidays[i].toStr() + "</li>");
+}
+document.write("</ul><p>Enjoy your journey!</p>");
+
+        </script>
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        

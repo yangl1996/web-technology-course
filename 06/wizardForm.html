@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 6</title>
+        <link rel="stylesheet" href="./static/homework6.css">
+        <script language="javascript">
+function noValue(val) {
+    if (val.search(/\w/) == -1) {
+        return true;
+    } 
+    return false;
+}
+
+function allNum(val) {
+    if (val.search(/\D/) == -1) {
+        return true;
+    }
+    return false;
+}
+
+function checkText(q, qc) {
+    for ( var i =0 ; i < q.length; i++) {
+        if (noValue(q.elements[i].value)) {
+            qc.value += "No value: "+ q.elements[i].name + "\n";
+            return false;
+        }
+    }
+    return true;
+}
+
+function checkSubmit() {
+    var q = document.quiz;
+    var qc = q.chat;            
+    for ( var i=0; i<q.holiday.options.length; i++) {
+        if (q.holiday.options[i].selected) {
+            qc.value += "Selected: " + q.holiday.options[i].value + "\n";
+        }
+    }
+    if ( allNum(q.Personal_Age.value)) {
+        age_int = parseInt(q.Personal_Age.value);
+        if (age_int <= 5) {
+            qc.value += "Age below 5\n";
+            return false;
+        }
+        if (age_int >= 150) {
+            qc.value += "Age above 150\n";
+            return false;
+        }
+    }
+    else {
+        qc.value += "Invalid age!\n";
+        return false;
+    }
+
+    if ( noValue(q.Personal_FirstName.value) ) {
+        qc.value += "What no name? - I shall call you Belinda\n";
+        q.Personal_FirstName.value = "Belinda";
+    }                 
+    return checkText(q, qc);                 
+}
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 6: JavaScript is not Java</h1>
+            <h2 class="title">Homework 5</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework6.html">Homework 0</a></p>
+            <p><a href="./hiThere.html">Homework 1</a></p>
+            <p><a href="./function.html">Homework 2</a></p>
+            <p><a href="./popups.html">Homework 3</a></p>
+            <p><a href="./objects.html">Homework 4</a></p>
+            <p><a href="./wizardForm.html">Homework 5</a></p>
+        </div>
+        <div class="right-bar"><br></div>
+        <div class="main">
+            <form action="/cgi-bin/dump.pl" onSubmit="return checkSubmit();" method="GET" name="quiz">
+                <OL>
+                    <LI><P>Please identify and describe yourself:</P>
+                    <TABLE>
+                        <TR>
+                            <TD ALIGN="right"><EM>First Name</EM></TD>
+                            <TD><INPUT TYPE=TEXT NAME="Personal_FirstName" SIZE=25></TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="right"><EM>Last Name</EM></TD>
+                            <TD><INPUT TYPE=TEXT NAME="Personal_LastName" SIZE=25></TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="right"><EM>Age</EM></TD>
+                            <TD><INPUT TYPE=TEXT NAME="Personal_Age" SIZE=3 MAXLENGTH=3></TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="right"><EM>Sex</EM></TD>
+                            <TD><INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Male" CHECKED>Male 
+                                <INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Female">Female</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="right"><EM>ID Number</EM></TD>
+                            <TD><INPUT TYPE=TEXT NAME="Personal_IDNumber" SIZE=16 MAXLENGTH=16></TD>
+                        </TR>
+                    </TABLE>
+
+                    <LI>
+                        <P>Choose one of the following options:</P>
+                        <P><INPUT TYPE=RADIO NAME="watch" VALUE="Dunno" CHECKED> I don't know?!
+                    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Radio"> Radio
+                    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="TV"> TV
+                    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Film"> Film
+                    <BR><BR>
+                    </P>
+
+                    <LI>
+                        <P>Choose one of the following options:</P>
+                        <P><SELECT NAME="holiday">
+                            <OPTION value="Greece" SELECTED>Greece
+                            <OPTION value="Italy">Italy 
+                            <OPTION value="France">France
+                            <OPTION value="Spain">Spain
+                        </SELECT>
+                        <BR></P>
+                    <LI>
+                        <P>How would you rate your knowledge of JavaScript?</P>
+                        <P>
+                        <INPUT TYPE=RADIO NAME="knowledge" VALUE="1" >1
+                        <INPUT TYPE=RADIO NAME="knowledge" VALUE="2" >2
+                        <INPUT TYPE=RADIO NAME="knowledge" VALUE="3" CHECKED>3
+                        <INPUT TYPE=RADIO NAME="knowledge" VALUE="4">4
+                        <INPUT TYPE=RADIO NAME="knowledge" VALUE="5">5 
+                        <BR>
+                        </P>
+                </OL>
+                      <p/>
+                      <textarea name="chat" rows=5 cols=20>
+                      </textarea>
+                      <p/>
+                      <INPUT TYPE=SUBMIT VALUE="Submit Form">
+                      </FORM>
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        

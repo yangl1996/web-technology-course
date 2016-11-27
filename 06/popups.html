@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 6</title>
+        <link rel="stylesheet" href="./static/homework6.css">
+        <script language="javascript">
+function teleport() {
+    if (! confirm("Teleport to another page?")) {
+        window.alert("Well, fine :)"); 
+    } 
+    else {
+        var n = prompt("Where would you like to go?", "http://www.yangl1996.com"); 
+        location = n;
+    }
+}
+        </script>
+    </head>
+
+    <body onLoad="teleport()">
+        <div class="header">
+            <h1 class="title">Week 6: JavaScript is not Java</h1>
+            <h2 class="title">Homework 3</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+            <p><a href="./homework6.html">Homework 0</a></p>
+            <p><a href="./hiThere.html">Homework 1</a></p>
+            <p><a href="./function.html">Homework 2</a></p>
+            <p><a href="./popups.html">Homework 3</a></p>
+            <p><a href="./objects.html">Homework 4</a></p>
+            <p><a href="./wizardForm.html">Homework 5</a></p>
+        </div>
+        <div class="right-bar"><br></div>
+        <div class="main">
+            <p><b>Question 1.</b></p>
+            <p><a href="#" onclick="teleport();return false;">Teleport to another page!</a></p>
+            <p><b>Question 2.</b></p>
+            <p>
+            <a href="#" onMouseOver="self.status='Off to the Lemon'; return true;" onMouseOut="self.status='';" >the Lemon</a>?
+            <br />
+            or would you prefer the  
+            <a href="#" onMouseOver="self.status='Ah.... I see that you prefer the lime'; return true;" onMouseOut="self.status='';">the Lime</a>?
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        
