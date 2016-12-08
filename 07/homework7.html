@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 7</title>
+        <link rel="stylesheet" href="./static/homework7.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="title">Week 7: Java Applets and Servlets</h1>
+            <h2 class="title">Homeworks</h2>
+        </div>
+        <div class="left-bar">
+            <p><a href="../index.html">Back to Homepage</a></p>
+        </div>
+        <div class="right-bar"><br></div>
+        <div class="main">
+            <h1>Homework 1</h1>
+            <h2>On Safari (Mac OS X)</h2>
+            <img src="./static/shoot.png" alt="Screenshot 1" style="float:right;width:760px;">
+            <p>It seems that most browsers have disabled Java Applet by default due to security issues.</p>
+            <h2>On Safari (iOS)</h2>
+            <img src="./static/shoot2.png" alt="Screenshot 2" style="float:right;width:760px;">
+            <p>Mobile devices don't support Java at all.</p>
+            <h1>Homework 2</h1>
+            <h2>AWT</h2>
+            <APPLET CODE="awtdemo.class" WIDTH=500 HEIGHT=500></APPLET>
+            <h2>Swing</h2>
+            <APPLET CODE="swingdemo.class" WIDTH=500 HEIGHT=500></APPLET>
+            <h1>Homework 3</h1>
+            <APPLET CODE="dynamicdemo.class" WIDTH=500 HEIGHT=500>
+                <param name="r" value="200"/>
+                <param name="g" value="200"/>
+                <param name="b" value="200"/>
+                <param name="sz" value="60"/>
+            </APPLET>
+            <h1>Homework 4</h1>
+            <p>
+            AWT directly invokes native system GUI code, which won't behave the same on every machine. Swing is pure-Java GUI. Swing uses AWT to implement itself, acting as a wrapper of AWT, thus ensuring identical behavior on every machine.
+            </p>
+
+        </div>
+        <div class="footer">
+            <p class="footer">Lei Yang, Fall 2016</p>
+        </div>
+    </body>
+</html>
+        
