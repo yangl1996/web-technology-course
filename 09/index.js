@@ -31,6 +31,36 @@ app.get('/results', function(req, res) {
     res.render('results', userdata=user_list);
 });
 
+app.post('/delete', function(req, res) {
+    raw_select = req.body['select'];
+    var to_delete = [];
+    if (typeof raw_select === 'string') {
+        to_delete.push(parseInt(raw_select));
+    }
+    else {
+        for (idx in raw_select) {
+            to_delete.push(parseInt(raw_select[idx]));
+        }
+    }
+    var new_user_list = [];
+    var act_sz = user_list.length;
+    for (var us = 0; us < act_sz; us++) {
+        if (to_delete.indexOf(user_list[us].id) === -1) {
+            var transfer = user_list[us];
+            new_user_list.push(transfer);
+        }
+    }
+    user_list = new_user_list.slice();
+    var updated_db_str = JSON.stringify({'list': user_list, 'size': user_size}, null, 4);
+    var fs = require('fs');
+    fs.writeFile("./user-db.json", updated_db_str, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+    });
+    res.redirect('/results');
+});
+
 app.post('/survey', function(req, res) {
     var user_name = req.body['name'];
     var user_age = req.body['age'];
