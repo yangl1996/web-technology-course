@@ -1,8 +1,22 @@
 extends ./includes/layout.pug
 
 block subtitle
-    h2(class="title") Code Description
+    h2(class="title") Survey
 
 block content
-    p hello, world!
+    form(action="/survey", method="post")
+        label(class="form-label", for="name") Name
+        input(type="text", id="name", name="name")
+        label(class="form-label", for="age") Age
+        input(type="text", id="age", name="age")
+        label(class="form-label") Gender
+        input(type="radio", id="male", name="gender", value="male")
+        label(class="radio-label", for="male") Male
+        input(type="radio", id="female", name="gender", value="female")
+        label(class="radio-label", for="female") Female
+        label(class="form-label", for="email") Email
+        input(type="text", id="email", name="email")
+        input(type="submit", value="Submit")
+    form(action="/results")
+        input(type="submit", value="Results")
 
