@@ -4,5 +4,21 @@ block subtitle
     h2(class="title") Results
 
 block content
-    p hello, world!
+    form(action="/delete", method="post")
+        table
+            tr
+                th Select
+                th Name
+                th Age
+                th Gender
+                th Email
+            for entry in userdata
+                tr
+                    td
+                        input(type="checkbox", name="select", value=entry.id)
+                    td= entry.name
+                    td= entry.age
+                    td= entry.gender
+                    td= entry.email
+        input(type="submit", value="Delete Selected")
 

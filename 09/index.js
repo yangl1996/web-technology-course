@@ -28,7 +28,7 @@ app.get('/survey', function(req, res) {
 });
 
 app.get('/results', function(req, res) {
-    res.render('results');
+    res.render('results', userdata=user_list);
 });
 
 app.post('/survey', function(req, res) {
