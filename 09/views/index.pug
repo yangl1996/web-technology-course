@@ -4,5 +4,16 @@ block subtitle
     h2(class="title") Code Description
 
 block content
-    p hello, world!
+    p.
+        I choose node.js and express.js as the framework. It's lightweight and versatile, yet being very easy to deploy.
+    p.
+        Express.js decouples template from logic. All view related code is in views/ directory, with a hierarchical structure. Header, footer and other reused code is placed in includes/layout.pug, which will be expanded when creating templates for different pages.
+    p.
+        I create four endpoints: / for the index page, /survey for the survey form, /delete for deleting entries and /results for displaying entries. / and /survey are static pages, which will be rendered from static templates. /survey also accepts post requests to handle form submissions. /delete only accepts post requests. /results is rendered from the data source (a JSON file) and a template.
+    p.
+        All logic is placed in /index.js. Every allowed request endpoint has a handler function. The code is rather self-explaining. For data storage I just use a JSON file, which is lightweight and easy to integrate into the program.
+    p
+        | Source code at 
+        a(href="https://github.com/yangl1996/web-technology-course/tree/master/09", target="blank") github.com/yangl1996
+        |.
 
